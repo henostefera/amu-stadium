@@ -29,28 +29,29 @@ const RewardArena = () => {
         </div>
 
         {/* Rotating carousel */}
-        <div className="relative overflow-hidden">
-          <div className="flex space-x-8 animate-rotate-cards hover:pause">
-            {prizes.map((prize, index) => (
-              <Card 
-                key={index} 
-                className="shadow-stadium hover:shadow-lg transition-stadium border-2 hover:border-primary w-72 mx-auto flex-shrink-0"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <CardHeader className="text-center pb-4">
-                  <div className={`mx-auto mb-4 p-4 rounded-full ${prize.bgColor} w-fit`}>
-                    <prize.icon className={`w-8 h-8 ${prize.textColor}`} />
-                  </div>
-                  <CardTitle className="font-raleway text-xl">{prize.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-2xl font-bold font-poppins text-primary mb-2">{prize.value}</p>
-                  <p className="text-sm text-muted-foreground">{prize.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+      <div className="relative overflow-hidden">
+  <div className="flex w-max animate-scroll-cards">
+    {prizes.concat(prizes).map((prize, index) => (
+      <Card
+        key={index}
+        className="shadow-stadium hover:shadow-lg transition-stadium border-2 hover:border-primary w-72 mx-2 flex-shrink-0"
+      >
+        <CardHeader className="text-center pb-4">
+          <div className={`mx-auto mb-4 p-4 rounded-full ${prize.bgColor} w-fit`}>
+            <prize.icon className={`w-8 h-8 ${prize.textColor}`} />
           </div>
-        </div>
+          <CardTitle className="font-raleway text-xl">{prize.title}</CardTitle>
+        </CardHeader>
+        <CardContent className="text-center">
+          <p className="text-2xl font-bold font-poppins text-primary mb-2">{prize.value}</p>
+          <p className="text-sm text-muted-foreground">{prize.description}</p>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
+
+
 
         <div className="flex justify-center mt-12">
           <img src={prizeTrophy} alt="Championship Trophy" className="w-32 h-32 object-contain animate-fade-in" />

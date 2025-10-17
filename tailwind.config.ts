@@ -35,15 +35,17 @@ export default {
         raleway: ["Raleway", "sans-serif"],
       },
       keyframes: {
-        "fade-in": { "0%": { opacity: "0", transform: "translateY(10px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
-        "rotate-cards": {
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+         "100%": { opacity: "1", transform: "translateY(0)" } },
+        "scroll-cards": {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0%)" }, // left-to-right scroll
         },
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
-        "rotate-cards": "rotate-cards 15s linear infinite",
+        "scroll-cards": "scroll-cards 20s linear infinite",
       },
     },
   },
