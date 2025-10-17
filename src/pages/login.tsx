@@ -2,12 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const Login = () => {
+
+ 
+  
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted/10">
+      
       <Card className="w-full max-w-md p-6 shadow-stadium border-2 border-stadium-green/40 animate-fade-in">
+        <Link to={"/"} className="text-green-800 flex gap-2 "> <ArrowLeft /> Back to Home</Link>
         <CardHeader className="text-center pb-4">
+
           <CardTitle className="text-2xl font-bold font-poppins text-foreground">
             Login to Your Account
           </CardTitle>
@@ -52,6 +60,7 @@ const Login = () => {
               Register
             </Link>
           </p>
+          
         </CardContent>
       </Card>
     </div>
