@@ -26,7 +26,7 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <div className="mb-6">
-                  <p className="text-5xl sm:text-4xl font-bold font-poppins gradient-hero bg-clip-text">
+                  <p className="text-3xl sm:text-4xl font-bold font-poppins gradient-hero bg-clip-text">
   <span className="text-white">100 ETB</span>
 </p>
                   <p className="text-muted-foreground mt-2">per ticket</p>
